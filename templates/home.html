@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Student Records</title></head>
+<body>
+    <h1>📘 Student Records</h1>
+    <a href="/add">➕ Add Student</a> | <a href="/search">🔍 Search Student</a>
+    <ul>
+        {% for student in students %}
+        <li>{{ student[1] }} (Age: {{ student[2] }}, Dept: {{ student[3] }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

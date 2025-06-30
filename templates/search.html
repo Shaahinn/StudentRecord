@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Search Student</title></head>
+<body>
+    <h1>🔍 Search Student by Name</h1>
+    <form method="POST">
+        <input type="text" name="search" placeholder="Enter name..." required>
+        <input type="submit" value="Search">
+    </form>
+    <ul>
+        {% for student in results %}
+        <li>{{ student[1] }} (Age: {{ student[2] }}, Dept: {{ student[3] }})</li>
+        {% endfor %}
+    </ul>
+    <br><a href="/">← Back to Home</a>
+</body>
+</html>
